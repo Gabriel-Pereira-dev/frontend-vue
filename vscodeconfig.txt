@@ -1,0 +1,28 @@
+{
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "java.home": "/home/gabriel/Documentos/jdk-11.0.11+9",
+    "editor.linkedEditing": true,
+    "workbench.colorTheme": "Dracula Soft",
+    "workbench.iconTheme": "vscode-icons",
+    "liveSassCompile.settings.formats": [
+        {
+            "format": "expanded",
+            "extensionName": ".css",
+            "savePath": null
+        }
+    ],
+    "files.autoSave": "onFocusChange",
+    "emmet.syntaxProfiles": {
+           "vue-html": "html",
+           "vue": "html"
+    },
+    "cSpell.language": "en,pt-BR",
+    "[vue]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    }
+
+}
