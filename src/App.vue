@@ -1,4 +1,11 @@
 <template>
+  <ButtonStyled
+    :text="'Aperte Aqui!'"
+    :buttonClass="'primary'"
+    :user="usuario"
+    @passarinho="shock($event)"
+    ><template v-slot:after> <font-awesome-icon icon="laptop" /> </template
+  ></ButtonStyled>
   <select v-model="currentView">
     <option value="Props">Props1</option>
     <option value="Props2">Props2</option>
@@ -9,6 +16,9 @@
     <option value="Transitions">Transitions</option>
     <option value="TransitionGroup">TransitionGroup</option>
     <option value="CSSGridLayout">CSSGridLayout</option>
+    <option value="Areas">Areas</option>
+    <option value="Menu">Menu</option>
+    <option value="Login">Login</option>
   </select>
   <transition
     appear
@@ -18,18 +28,13 @@
   >
     <component :is="currentView" />
   </transition>
-
-  <ButtonStyled
-    :text="'Aperte Aqui!'"
-    :buttonClass="'primary'"
-    :user="usuario"
-    @passarinho="shock($event)"
-    ><template v-slot:after> <font-awesome-icon icon="laptop" /> </template
-  ></ButtonStyled>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Login from '@/components/Login.vue'
+import Menu from '@/components/Menu.vue'
+import Areas from '@/components/Areas.vue'
 import CSSGridLayout from '@/components/CSSGridLayout.vue'
 import TransitionGroup from '@/components/TransitionGroup.vue'
 import Transitions from '@/components/Transitions.vue'
@@ -44,6 +49,9 @@ import LifeHooks from '@/components/LifeHooks.vue'
 
 export default defineComponent({
   components: {
+    Login,
+    Menu,
+    Areas,
     CSSGridLayout,
     TransitionGroup,
     Transitions,
@@ -72,3 +80,4 @@ export default defineComponent({
   }
 })
 </script>
+<style lang="scss" scoped></style>
