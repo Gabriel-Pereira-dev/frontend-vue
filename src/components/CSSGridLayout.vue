@@ -5,6 +5,9 @@
       <div class="container__item"></div>
       <div class="container__item"></div>
       <div class="container__item"></div>
+      <div class="container__item"></div>
+      <div class="container__item"></div>
+      <div class="container__item"></div>
     </div>
   </div>
 </template>
@@ -26,20 +29,21 @@ export default defineComponent({})
 }
 .container {
   display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // grid-template-rows: 200px 200px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  grid-auto-rows: 150px;
   row-gap: 1rem;
   column-gap: 1rem;
   //grid-auto-flow: row;
 
   &__item {
     background-color: chartreuse;
-    height: 100px;
+    height: auto;
+
     margin: 0px;
     border: 1px solid black;
     border-radius: 5px;
-    grid-auto-rows: minmax(100px, 200px);
-    grid-auto-columns: minmax(100px, 200px);
+    // grid-auto-rows: minmax(100px, 200px);
+    // grid-auto-columns: minmax(100px, 200px);
   }
 }
 </style>
